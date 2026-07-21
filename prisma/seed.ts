@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, TaskStatus } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
 type TaskStatus = "TODO" | "IN_PROGRESS" | "DONE";
