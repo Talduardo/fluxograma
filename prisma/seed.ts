@@ -1,9 +1,6 @@
 import { PrismaClient, TaskStatus } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
-type TaskStatus = "TODO" | "IN_PROGRESS" | "DONE";
-const TaskStatus = { TODO: "TODO", IN_PROGRESS: "IN_PROGRESS", DONE: "DONE" } as const;
-
 const prisma = new PrismaClient();
 
 function dayOffset(days: number) {
