@@ -1,0 +1,45 @@
+// Banco: Postgres (gratuito em provedores como Neon ou Supabase).
+// Necessário para deploy em hospedagens serverless como a Vercel, onde
+// um arquivo SQLite local não persistiria entre deploys/execuções.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String
+  email     String    @unique
+  password  String
+  companies Company[]
+  createdAt DateTime  @default(now())
+}
+
+model Company {
+  id        String   @id @default(cuid())
+  name      String
+  color     String   @default("#6C5CE7")
+  owner     User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId   String
+  tasks     Task[]
+  createdAt DateTime @default(now())
+}
+
+// SQLite não suporta o tipo `enum` do Prisma, por isso o status é uma String
+// livre aqui — os valores válidos ("TODO" | "IN_PROGRESS" | "DONE") são
+// controlados no código da aplicação (ver src/types/models.ts e as rotas de API).
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @default("")
+  date        DateTime
+  status      String   @default("TODO")
+  company     Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
