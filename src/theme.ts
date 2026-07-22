@@ -3,12 +3,12 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     mode: "light",
-    primary: { main: "#6C5CE7" },
-    secondary: { main: "#00B894" },
-    error: { main: "#E74C3C" },
-    warning: { main: "#F0932B" },
-    success: { main: "#00B894" },
-    background: { default: "#F6F5FB", paper: "#FFFFFF" },
+    primary: { main: "#B8924A" },
+    secondary: { main: "#5B4636" },
+    error: { main: "#8C3B3B" },
+    warning: { main: "#B8752C" },
+    success: { main: "#4B6E52" },
+    background: { default: "#FAF7F1", paper: "#FFFFFF" },
   },
   shape: { borderRadius: 14 },
   typography: {

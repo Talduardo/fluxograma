@@ -1,5 +1,5 @@
 // Banco: Postgres (gratuito em provedores como Neon ou Supabase).
-// Necessário para deploy em hospedagens serverless como a Vercel/Netlify, onde
+// Necessário para deploy em hospedagens serverless como a Vercel, onde
 // um arquivo SQLite local não persistiria entre deploys/execuções.
 generator client {
   provider = "prisma-client-js"
@@ -22,7 +22,7 @@ model User {
 model Company {
   id        String   @id @default(cuid())
   name      String
-  color     String   @default("#6C5CE7")
+  color     String   @default("#B8924A")
   owner     User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId   String
   tasks     Task[]

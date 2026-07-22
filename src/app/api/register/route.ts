@@ -36,7 +36,7 @@ export async function POST(req: Request) {
 
   // Cria uma empresa inicial para o usuário já começar com algo no calendário
   await prisma.company.create({
-    data: { name: "Minha Empresa", color: "#6C5CE7", ownerId: user.id },
+    data: { name: "Minha Empresa", color: "#B8924A", ownerId: user.id },
   });
 
   return NextResponse.json({ id: user.id, email: user.email }, { status: 201 });
