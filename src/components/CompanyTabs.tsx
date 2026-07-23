@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import type { Company } from "@/types/models";
 
-const PALETTE = ["#B8924A", "#5B4636", "#2F3E46", "#7A2E2E", "#4B6E52", "#3B4A6B"];
+const PALETTE = ["#D4AF37", "#5B4636", "#2F3E46", "#7A2E2E", "#4B6E52", "#3B4A6B"];
 
 type Props = {
   companies: Company[];

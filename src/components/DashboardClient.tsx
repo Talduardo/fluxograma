@@ -244,7 +244,7 @@ export default function DashboardClient({ userName, initialCompanies, initialTas
         open={!!selectedDate}
         date={selectedDate}
         companyId={selectedCompanyId}
-        companyColor={selectedCompany?.color ?? "#B8924A"}
+        companyColor={selectedCompany?.color ?? "#D4AF37"}
         tasks={dayTasks}
         onClose={() => setSelectedDate(null)}
         onTaskCreated={handleTaskCreated}

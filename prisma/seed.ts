@@ -24,7 +24,7 @@ async function main() {
   });
 
   const empresaX = await prisma.company.create({
-    data: { name: "Empresa X", color: "#B8924A", ownerId: user.id },
+    data: { name: "Empresa X", color: "#D4AF37", ownerId: user.id },
   });
 
   const empresaY = await prisma.company.create({

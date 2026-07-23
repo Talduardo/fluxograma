@@ -6,7 +6,7 @@ import { prisma } from "@/lib/prisma";
 
 const createSchema = z.object({
   name: z.string().min(1, "Nome obrigatório"),
-  color: z.string().optional().default("#B8924A"),
+  color: z.string().optional().default("#D4AF37"),
 });
 
 export async function GET() {
