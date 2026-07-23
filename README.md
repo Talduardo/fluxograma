@@ -21,10 +21,33 @@ data com status "em andamento", "em atraso" (calculado automaticamente pela data
    data, permitindo criar novas tarefas, mudar o status (clicando no chip) e excluir.
 4. **Resumo de status**: cards com contagem de tarefas em andamento, em atraso, concluídas
    e a fazer — atualizados em tempo real conforme você mexe nas tarefas.
+5. **App instalável (PWA)**: funciona no Android e no iPhone como um app, com ícone próprio
+   na tela inicial e abrindo em tela cheia, sem loja e sem custo. Veja "Instalar como app" abaixo.
 
 O status "em atraso" é **calculado automaticamente**: qualquer tarefa cuja data já passou
 e que não esteja marcada como concluída aparece como atrasada, sem precisar de nenhuma
 ação manual.
+
+## Instalar como app (PWA)
+
+O site já está configurado como Progressive Web App — funciona como um app nativo depois
+de instalado, com ícone na tela inicial e sem a barra de endereço do navegador.
+
+**No Android (Chrome):**
+- Abra o site publicado.
+- Vai aparecer um botão **"Instalar app"** no cabeçalho (ou, se não aparecer, toque no
+  menu de três pontinhos do Chrome → **"Instalar aplicativo"** / **"Adicionar à tela
+  inicial"**).
+
+**No iPhone/iPad (Safari):**
+- O iOS não mostra um botão automático — é preciso instalar manualmente:
+- Abra o site no **Safari** (tem que ser o Safari, não funciona pelo Chrome no iOS).
+- Toque no ícone de compartilhar (o quadrado com a seta pra cima).
+- Toque em **"Adicionar à Tela de Início"**.
+
+Depois de instalado, o app abre em tela cheia, com o ícone dourado do Fluxo, e continua
+puxando os dados reais do mesmo banco de dados — é o mesmo site, só que empacotado como
+app no celular.
 
 ## Como rodar localmente
 

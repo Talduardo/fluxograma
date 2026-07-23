@@ -18,6 +18,7 @@ import CompanyTabs from "@/components/CompanyTabs";
 import CalendarMonth from "@/components/CalendarMonth";
 import StatusSummary from "@/components/StatusSummary";
 import DayPanel from "@/components/DayPanel";
+import InstallPwaButton from "@/components/InstallPwaButton";
 
 type Props = {
   userName: string;
@@ -119,6 +120,7 @@ export default function DashboardClient({ userName, initialCompanies, initialTas
             <Typography variant="body2" color="text.secondary" sx={{ display: { xs: "none", sm: "block" } }}>
               Olá, {userName.split(" ")[0]}
             </Typography>
+            <InstallPwaButton />
             <Button
               size="small"
               startIcon={<LogoutRoundedIcon />}
